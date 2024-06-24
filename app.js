@@ -11,7 +11,7 @@ app.use(bodyParser.json());
 // Use routes
 
 const corsOptions = {
-    origin: 'https://todolist-client-eight.vercel.app',
+    origin: '*',
     methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
     credentials: true,
     optionsSuccessStatus: 204
