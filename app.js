@@ -9,7 +9,11 @@ const indexRouter = require('./routes/index.js');
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 // Use routes
-app.use(cors({ origin: "*" })
+app.use(cors({
+    origin: ["https://todolist-client-eight.vercel.app"],
+    methods: ["GET", "POST", "PUT", "DELETE"],
+    credentials: true
+})
 )
 app.use('/auth', indexRouter);
 
